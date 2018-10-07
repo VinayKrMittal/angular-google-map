@@ -22,6 +22,28 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Code For Google Map
+## Update tsconfig.app.json
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "module": "es2015",
+    "types": [ "googlemaps"]
+  },
+  "exclude": [
+    "src/test.ts",
+    "**/*.spec.ts"
+  ]
+}
+
+## Add Script in  index.html
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=visualization"></script>
+
+## Install Google Map types for typescript
+Run command npm install — save @types/googlemaps
+
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
